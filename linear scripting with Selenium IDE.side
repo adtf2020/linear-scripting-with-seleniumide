@@ -1,0 +1,660 @@
+{
+  "id": "7ab0a927-bb27-4888-8d8c-d12b6452575a",
+  "version": "2.0",
+  "name": "linear scripting with Selenium IDE",
+  "url": "http://localhost:9090",
+  "tests": [{
+    "id": "18464e48-b46d-4e11-883f-4d42368862bb",
+    "name": "Suite Setup",
+    "commands": [{
+      "id": "c96a202f-317d-4888-9ffe-036de78b0571",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b41ca565-37ec-424a-a745-a883a96be05c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:9090/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2be90dd-a905-4ba4-b807-be3a2d6c77a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "600x300",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4cfd85fb-5bb2-4945-991d-482052466cc5",
+    "name": "I can add a todo",
+    "commands": [{
+      "id": "e7e8f75d-9163-42e2-a742-69df66c05d07",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "655f762f-a08f-4a7a-8f88-53ec54aa9354",
+      "comment": "",
+      "command": "run",
+      "target": "Test Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a8ed836-518d-485e-bbe0-a7359ca6d355",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(4) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb43626d-e55a-486d-bf0d-3290898edd17",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Adopter de bonnes pratiques de test"
+    }, {
+      "id": "6794f69c-548d-4e61-a620-038eb545fa1c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecc36485-1774-49b4-93a9-5ffd9d4a039f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=ul .au-target:nth-child(2)",
+      "targets": [
+        ["css=ul .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c83034-0d93-43e0-bf5c-69e9d71e2a98",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "xpath=//input[@type='checkbox']",
+      "targets": [
+        ["css=.au-target > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2495508-c051-4278-b0e6-cb41664ca4be",
+      "comment": "",
+      "command": "run",
+      "target": "Test Teardown",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49a809bf-c128-464e-90aa-d8ba4737169b",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Teardown",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9eed2bb0-53d5-45c7-9270-e6c2d151bee5",
+    "name": "Test Setup",
+    "commands": [{
+      "id": "bbde44e8-bfd9-49f0-a51d-60703bc62040",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=heading",
+      "targets": [
+        ["id=heading", "id"],
+        ["css=#heading", "css:finder"],
+        ["xpath=//h1[@id='heading']", "xpath:attributes"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Tâches')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "798b0cbb-b8ce-4a4d-9d69-ae0433da58b4",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Tout Doux",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bc6d47a2-193a-4ccb-9b67-63cda9a8e9ab",
+    "name": "Test Teardown",
+    "commands": [{
+      "id": "d5db6e91-e038-498c-bc19-3aab89af4bb2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.location.reload()",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "947789e1-a3b2-4817-acf2-5b1a135f7daf",
+    "name": "Suite Teardown",
+    "commands": [{
+      "id": "6b32f2e5-5030-44c7-bf1a-253fafaee52a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9fe50559-a240-4f2a-bec5-f7756295fbe9",
+    "name": "I can select a todo",
+    "commands": [{
+      "id": "6fc7b171-bd7e-4a8f-b0c7-8f750299de58",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28345a0a-dca6-4659-93f4-e469432094d9",
+      "comment": "",
+      "command": "run",
+      "target": "Test Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5393aa56-da9c-4bb2-a001-8f4943885b3b",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Adopter de bonnes pratiques de test"
+    }, {
+      "id": "8efe5fb1-68f4-4666-9d20-5ce6711eb050",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c399c642-1f84-4d72-8d12-0ff3d91f2a78",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Comprendre le Keyword-Driven Testing"
+    }, {
+      "id": "478e9981-24ec-4f16-9d30-aa1effea3998",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a34f3a2b-160d-41c5-8277-2eca4e5d20d8",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Automatiser des cas de test avec Robot Framework"
+    }, {
+      "id": "f0369490-b6e2-4483-a993-1882c7a8ea13",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "974256f5-62c8-4549-b7da-f1e6b2a04280",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=ul > .au-target:nth-child(1) > .au-target:nth-child(2)",
+      "targets": [
+        ["css=ul > .au-target:nth-child(1) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3979a39-c428-4bfa-9c54-2f350dcb3a22",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.au-target:nth-child(2) > .au-target:nth-child(2)",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//li[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92c621ec-5212-4ec5-bbad-34be194e7443",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.au-target:nth-child(3) > .au-target:nth-child(2)",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//li[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bb7bb66-58fc-482a-8042-cfa1d1df80f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.au-target:nth-child(1) > .au-target:nth-child(1)",
+      "targets": [
+        ["css=.au-target:nth-child(1) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a76c7d61-175e-4c91-be14-a23184535c1c",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "xpath=//input[@type='checkbox']",
+      "targets": [
+        ["css=.au-target:nth-child(1) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05949473-6311-43b2-8a2e-9a790613aa55",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "xpath=(//input[@type='checkbox'])[2]",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[2]", "xpath:attributes"],
+        ["xpath=//li[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82a46c0f-1b2d-42b9-ba42-ca25c0b827f0",
+      "comment": "",
+      "command": "assertNotChecked",
+      "target": "xpath=(//input[@type='checkbox'])[3]",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=(//input[@type='checkbox'])[3]", "xpath:attributes"],
+        ["xpath=//li[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2acd7cbd-1f78-46b9-82e6-65628fa10bac",
+      "comment": "",
+      "command": "run",
+      "target": "Test Teardown",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7b5a1b5-4c2b-4a0b-8ec9-e4b1bc09ba32",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Teardown",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "76816003-7d1d-4db0-8f07-b9a7a0c9a24a",
+    "name": "I can remove a todo",
+    "commands": [{
+      "id": "6e2e2154-3fe2-43ee-b6d8-1ff19f03848f",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eba5b9ae-ee09-4d91-b244-caed57fb0225",
+      "comment": "",
+      "command": "run",
+      "target": "Test Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edb6c595-496a-4a28-98e5-5460e1e43ef4",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Choisir le bon type de framework de test"
+    }, {
+      "id": "6b1efb94-5e44-4a96-b403-fac8f24c9e64",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(3) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60ab4edb-390c-4b47-ac92-c6b9cb5f9128",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=ul .au-target:nth-child(3)",
+      "targets": [
+        ["css=ul .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a777890a-a5da-4958-ae43-24f74fef78d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=ul .au-target:nth-child(3)",
+      "targets": [
+        ["css=ul .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f029f466-5c10-4217-b901-d25dcee481dc",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=ul .au-target:nth-child(2)",
+      "targets": [
+        ["css=ul .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79484c30-c0d9-4930-8f0d-c3fb22385d1b",
+      "comment": "",
+      "command": "run",
+      "target": "Test Teardown",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a678fdea-d9af-4d3c-abb3-b63692456d26",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Teardown",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3383ccc2-d103-4520-bda3-900684fced24",
+    "name": "I can categorize some todos",
+    "commands": [{
+      "id": "ac641a78-adc7-4932-92ef-4b9fdf85c645",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "553b8a50-6984-4109-b443-f8a02897396f",
+      "comment": "",
+      "command": "run",
+      "target": "Test Setup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f956a36-aaff-4b5b-92c3-d94edffa1cca",
+      "comment": "",
+      "command": "type",
+      "target": "css=.au-target:nth-child(2) > .au-target:nth-child(2)",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Choisir un livre intéressant"
+    }, {
+      "id": "6b0d3cb1-2eec-46a3-ba4f-1fb256070a93",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1cea656-77c7-4f20-80ad-0a19fc285941",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//span[contains(.,'Personnel')]",
+      "targets": [
+        ["css=.au-target:nth-child(1) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//li/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Personnel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a184979a-8440-4313-bcfd-607cf3465fef",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//span[contains(.,'Professionnel')]",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Professionnel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a5d3bf8-48f1-481c-8ffa-c91daccf7b64",
+      "comment": "",
+      "command": "select",
+      "target": "css=label > .au-target",
+      "targets": [],
+      "value": "label=Personnel"
+    }, {
+      "id": "dbaf6bc9-0dc7-4a41-bdde-11803ef9bbb1",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Marcher et faire du vélo avec mon chien"
+    }, {
+      "id": "256961dd-5949-42fd-9d00-b90a349835b1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22ef429c-839e-4212-9ed7-147b56014b9e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.au-target:nth-child(2) > .au-target:nth-child(3)",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da290f23-146b-472e-90f2-455eb79b029a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//span[contains(.,'Personnel')]",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Personnel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c5871ae-c423-4c86-b751-725db4a8c6ee",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Faire un câlin avec mon chat"
+    }, {
+      "id": "4175a44d-00ff-484d-ab14-a5896b248383",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dcfee9d-cc9a-475a-b821-98c367af99df",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.au-target:nth-child(2) > .au-target:nth-child(3)",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f04fa309-6a9b-4149-a70f-aff4df320182",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//span[contains(.,'Personnel')]",
+      "targets": [
+        ["css=.au-target:nth-child(2) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Personnel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "669b3052-b308-4d04-af74-0747c2fbabff",
+      "comment": "",
+      "command": "select",
+      "target": "css=label > .au-target",
+      "targets": [],
+      "value": "label=Professionnel"
+    }, {
+      "id": "96dcbbfc-2d1f-4fbc-8841-a6d32d979773",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@type='text']",
+      "targets": [
+        ["css=.au-target:nth-child(4) > .au-target:nth-child(2)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Automatiser un cas de test de plus"
+    }, {
+      "id": "2085824f-0ffb-4147-9ac2-0aaea6fad0c6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.au-target:nth-child(4) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "92d2cdaa-0f9f-498d-a05a-039ead974410",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.au-target:nth-child(4) > .au-target:nth-child(1)",
+      "targets": [
+        ["css=.au-target:nth-child(4) > .au-target:nth-child(1)", "css:finder"],
+        ["xpath=//li[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Professionnel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f4d1481-ca04-4af7-8e55-6bd762579b89",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.au-target:nth-child(4) > .au-target:nth-child(3)",
+      "targets": [
+        ["css=.au-target:nth-child(4) > .au-target:nth-child(3)", "css:finder"],
+        ["xpath=//li[4]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a7c8dcc-4cce-4a54-b28d-08a40133c8d9",
+      "comment": "",
+      "command": "run",
+      "target": "Test Teardown",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbad38ef-3bc3-41e2-b342-4cb0aa77278c",
+      "comment": "",
+      "command": "run",
+      "target": "Suite Teardown",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "47836548-b093-47a8-a023-0bd75e235d4a",
+    "name": "Todos Selenium IDE",
+    "persistSession": true,
+    "parallel": false,
+    "timeout": 100,
+    "tests": ["4cfd85fb-5bb2-4945-991d-482052466cc5", "9fe50559-a240-4f2a-bec5-f7756295fbe9", "76816003-7d1d-4db0-8f07-b9a7a0c9a24a", "3383ccc2-d103-4520-bda3-900684fced24"]
+  }],
+  "urls": ["http://localhost:9090/"],
+  "plugins": []
+}
